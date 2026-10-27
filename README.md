@@ -1,16 +1,36 @@
-# React + Vite
+#  Full-Stack Blog Application - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend client for the Full-Stack Blog Application, built with **React**, **Vite**, and **Reactstrap**. It communicates with a Spring Boot REST API backend to provide user authentication, profile management, and dynamic blogging capabilities.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Tech Stack
 
-## React Compiler
+* **Framework:** React (Vite)
+* **UI Library / Styling:** Reactstrap (Bootstrap 5), React Icons
+* **HTTP Client:** Axios (with custom interceptors for JWT authentication)
+* **Notifications:** React Toastify
+* **Routing:** React Router DOM
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **User Authentication:** Secure login and registration flows with token management via `localStorage`.
+* **Dynamic Profile Management:** View user details, assigned roles, and editable bios with real-time API synchronization and local state caching.
+* **Protected Routes:** Route guards ensuring secure access to authorized pages.
+* **Responsive Layout:** Modern, mobile-friendly UI built with Bootstrap and custom CSS gradients.
+
+---
+
+##  Project Structure
+
+```text
+src/
+├── assets/          # Images, logos, and global styles
+├── auth/            # Authentication helper functions (token handling, local storage)
+├── components/      # Reusable UI components (Base layout, Navbar, etc.)
+├── pages/           # Page views (Profile, Login, Register, Home, etc.)
+├── services/        # API configuration and helper files (Axios instances)
+├── App.jsx          # Main routing and application entry
+└── main.jsx         # React root renderer
